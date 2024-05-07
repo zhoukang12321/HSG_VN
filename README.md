@@ -1,13 +1,14 @@
 <div align="center">
-<img src="./howto/figure/TaPA.png" alt="TaPA" width="256"/>
+<img src="![images](https://github.com/zhoukang12321/HSG_VN2/assets/127489297/a72868f9-0ff2-4c80-9742-29296261bca1)
+" alt="TaPA" width="256"/>
 
-# TaPA
+# HSG
 </div>
 
-# TaPA
-Official implementation of [Embodied Task Planning with Large Language Models](https://arxiv.org/abs/2307.01848).
+# HSG
+Official implementation of [Leverage Large Language Model-based Hierarchical Scene Graph Contrastive Learning for Multimodal Visual Navigation]).
 
-Try out the web demo 🤗 of **TaPA**: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/xuxw98/TAPA)
+Try out the web demo 🤗 of **HSG**: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/xuxw98/TAPA)
 
 The repository contains:
 - The [15K data](#data-release) used for fine-tuning the model.
@@ -16,27 +17,34 @@ The repository contains:
 - The code for [inference](#Running-the-inference) during navigation.
 
 ## News
-- **[2023.07.04]**  The **training code** for **TaPA** are released. 📌
+- **[2024.05.15]**  The **training code** for **HSG** are released. 📌
 
 ## Overview
 
-The pipeline of our embodied task planning framwork. We first collect multiple RGB
-images in different achivable standing points and views, and utilize an open-voculary detector to
-generate the list of existing objects in the scene. With the human instructions and predicted object
-list, our TaPA can generate executable action plans for subsequent navigation or manipulation robots.
+The pipeline of our embodied visual navigation framwork.The overview of our HSG visual navigation frame-
+work.We collect environmental object categories using an
+open-vocabulary detector from current observations. Then, we
+design a scene text prompt, including descriptions, object re-
+lationships, and action prompts. The LLM outputs normalized
+object node positions, which are then subjected to graph fuzzy
+search to approach close frontiers. After each LLM inference
+loop, the prompt is updated based on historical observations
+and actions to optimize action selection by updating the graph
+structure.
 
 <div align="center">
-  <img src="./howto/figure/pipeline.png" width="95%"/>
+  <img src="![main2](https://github.com/zhoukang12321/HSG_VN2/assets/127489297/1431b02a-a9c2-42ed-86fc-3d257aedddd0)
+" width="95%"/>
 </div>
 
 ## Setup
-Here is a from-scratch script for **TaPA**.
+Here is a from-scratch script for **HSG**.
 ```bash
 # Install Lit-LLaMA
-conda create -n tapa python=3.10
-conda activate tapa
-git clone https://github.com/Gary3410/TaPA.git
-cd TaPA
+conda create -n hsg python=3.10
+conda activate hsg
+git clone https://github.com/zhoukang12321/HSG_VN2.git
+cd hsg
 pip install -r requirements.txt
 # If you want to utilize more than one GPU
 pip install deepspeed
@@ -46,9 +54,9 @@ pip install deepspeed
 <summary> <strong> If you have problems with the installation, you can follow these steps </strong> </summary>
 
 1. conda create -n tapa python=3.10
-2. conda activate tapa
-3. git clone https://github.com/Gary3410/tapa
-4. cd TaPA
+2. conda activate hsg
+3. git clone https://github.com/zhoukang12321/HSG_VN2
+4. cd HSG_VN2
 5. pip install torch==2.0.0+cu117 torchvision==0.15.1+cu117 torchaudio==2.0.1 --index-url https://download.pytorch.org/whl/cu117
 6. pip install sentencepiece
 7. pip install tqdm
@@ -64,7 +72,7 @@ pip install deepspeed
 
 ```bash
 # Install Detic
-# Exit the TaPA file first
+# Exit the HSG_VN2 file first
 cd ..
 git clone git@github.com:facebookresearch/detectron2.git
 cd detectron2
@@ -78,11 +86,11 @@ pip install -r requirements.txt
 **Note:** If you have any problems with the installation, you can refer to [Detic_INSTALL.md](https://github.com/facebookresearch/Detic/blob/main/docs/INSTALL.md)
 Meanwhile, you also need to download the appropriate pre-trained model and put the weights into the ``models`` folder.
 
-Once the installation is complete, we need to copy the files from **Detic** to the **tapa** directory.
+Once the installation is complete, we need to copy the files from **Detic** to the **hsg** directory.
 
-The TaPA file directory should be:
+The HSG_VN2 file directory should be:
 ```
-TaPA
+HSG_VN2
 ├── checkpoints
 │   ├── lit-llama
 │   ├── llama
@@ -182,7 +190,7 @@ Please request access to the pre-trained LLaMA from [this form](https://forms.gl
 
 Then, put them in the `checkpoints` directory.
 ```
-TaPA
+HSG_VN2
 ├── checkpoints
 │   ├── lit-llama
 │   ├── llama
@@ -199,7 +207,7 @@ python scripts/convert_checkpoint.py --model_size 7B
 ```
 Once converted, you should have a folder like this:
 ```
-TaPA
+HSG_VN2
 ├── checkpoints
 │   ├── lit-llama
 │   │   ├── 7B
@@ -280,12 +288,7 @@ python docker_build.py
 ./run_docker.sh -h <ABS_DATA_PATH>
 ```
 
-## Contributors
-All grad students below contributed equally and the order is determined by random draw.
-- [Ziwei Wang](https://ziweiwangthu.github.io/)
-- [Xiuwei Xu](https://xuxw98.github.io/)
-- [Zhenyu Wu](https://gary3410.github.io/)
-- [Guanxing Lu](https://guanxinglu.github.io/)
+
  
 All advised by [Jiwen Lu](http://ivg.au.tsinghua.edu.cn/Jiwen_Lu/). Zhenyu Wu is also advised by [Haibin Yan](https://scholar.google.com/citations?user=-AQLKlsAAAAJ).
 ## Acknowledgement
