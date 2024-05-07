@@ -1,5 +1,5 @@
 <div align="center">
-<img src="./howto/figure/cityus.png" alt="HSG" width="256"/>
+<img src="./howto/figure/cityus.png" alt="HSG" width="600"/>
 
 # HSG
 </div>
@@ -54,7 +54,7 @@ pip install deepspeed
 1. conda create -n tapa python=3.10
 2. conda activate hsg
 3. git clone https://github.com/zhoukang12321/HSG_VN2
-4. cd HSG_VN2
+4. cd HSG_VN
 5. pip install torch==2.0.0+cu117 torchvision==0.15.1+cu117 torchaudio==2.0.1 --index-url https://download.pytorch.org/whl/cu117
 6. pip install sentencepiece
 7. pip install tqdm
@@ -86,9 +86,9 @@ Meanwhile, you also need to download the appropriate pre-trained model and put t
 
 Once the installation is complete, we need to copy the files from **Detic** to the **hsg** directory.
 
-The HSG_VN2 file directory should be:
+The HSG_VN file directory should be:
 ```
-HSG_VN2
+HSG_VN
 ├── checkpoints
 │   ├── lit-llama
 │   ├── llama
@@ -180,6 +180,8 @@ Meanwhile, we also count the average number of actions required by the Top7 inst
 [//]: # (![parse_analysis]&#40;assert/parse_analysis.png | width=100&#41;)
 [<img src="./howto/figure/tapa_v4.png" width="750" />](./howto/figure/tapa_v4.png)
 
+## HSG generation
+We extract HSG by random walking in the scenes, which is our previous work.
 ## Fine-tuning
 We fine-tune the LLaMA-7B model on `alpaca_15k_instruction.json` according to the script provided by [Lit-LLaMA](https://github.com/Lightning-AI/lit-llama).
 
@@ -188,7 +190,7 @@ Please request access to the pre-trained LLaMA from [this form](https://forms.gl
 
 Then, put them in the `checkpoints` directory.
 ```
-HSG_VN2
+HSG_VN
 ├── checkpoints
 │   ├── lit-llama
 │   ├── llama
@@ -205,7 +207,7 @@ python scripts/convert_checkpoint.py --model_size 7B
 ```
 Once converted, you should have a folder like this:
 ```
-HSG_VN2
+HSG_VN
 ├── checkpoints
 │   ├── lit-llama
 │   │   ├── 7B
