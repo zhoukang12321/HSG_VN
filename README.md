@@ -41,8 +41,8 @@ Here is a from-scratch script for **HSG**.
 # Install Lit-LLaMA
 conda create -n hsg python=3.10
 conda activate hsg
-git clone https://github.com/zhoukang12321/HSG_VN2.git
-cd hsg
+git clone https://github.com/zhoukang12321/HSG_VN.git
+cd HSG_VN
 pip install -r requirements.txt
 # If you want to utilize more than one GPU
 pip install deepspeed
@@ -51,9 +51,9 @@ pip install deepspeed
 <details>
 <summary> <strong> If you have problems with the installation, you can follow these steps </strong> </summary>
 
-1. conda create -n tapa python=3.10
+1. conda create -n hsg python=3.10
 2. conda activate hsg
-3. git clone https://github.com/zhoukang12321/HSG_VN2
+3. git clone https://github.com/zhoukang12321/HSG_VN
 4. cd HSG_VN
 5. pip install torch==2.0.0+cu117 torchvision==0.15.1+cu117 torchaudio==2.0.1 --index-url https://download.pytorch.org/whl/cu117
 6. pip install sentencepiece
