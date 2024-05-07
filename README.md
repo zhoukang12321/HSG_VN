@@ -1,5 +1,5 @@
 <div align="center">
-<img src="./howto/figure/hsg.jpg" alt="HSG" width="256"/>
+<img src="./howto/figure/images.png" alt="HSG" width="256"/>
 
 # HSG
 </div>
@@ -32,8 +32,7 @@ and actions to optimize action selection by updating the graph
 structure.
 
 <div align="center">
-  <img src="![main2](https://github.com/zhoukang12321/HSG_VN2/assets/127489297/1431b02a-a9c2-42ed-86fc-3d257aedddd0)
-" width="95%"/>
+  <img src="./howto/figure/main.png" width="95%"/>
 </div>
 
 ## Setup
