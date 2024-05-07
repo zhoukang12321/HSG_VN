@@ -182,6 +182,8 @@ Meanwhile, we also count the average number of actions required by the Top7 inst
 
 ## HSG generation
 We extract HSG by random walking in the scenes, which is our previous work.
+We build a initial scene graph and update using GAT.
+
 ## Fine-tuning
 We fine-tune the LLaMA-7B model on `alpaca_15k_instruction.json` according to the script provided by [Lit-LLaMA](https://github.com/Lightning-AI/lit-llama).
 
