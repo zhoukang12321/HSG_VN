@@ -1,5 +1,5 @@
 <div align="center">
-<img src="./howto/figure/images.png" alt="HSG" width="256"/>
+<img src="./howto/figure/cityus.png" alt="HSG" width="256"/>
 
 # HSG
 </div>
