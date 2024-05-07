@@ -32,7 +32,7 @@ and actions to optimize action selection by updating the graph
 structure.
 
 <div align="center">
-  <img src="./howto/figure/main.png" width="95%"/>
+  <img src="./howto/figure/main2.png" width="95%"/>
 </div>
 
 ## Setup
