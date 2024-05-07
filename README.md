@@ -7,7 +7,7 @@
 # HSG
 Official implementation of [Leverage Large Language Model-based Hierarchical Scene Graph Contrastive Learning for Multimodal Visual Navigation]).
 
-Try out the web demo 🤗 of **HSG**: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/xuxw98/TAPA)
+Try out the web demo 🤗 of **HSG**: [![Hugging Face Spaces] to be continue.
 
 The repository contains:
 - The [15K data](#data-release) used for fine-tuning the model.
