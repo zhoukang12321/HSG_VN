@@ -1,6 +1,6 @@
 <div align="center">
 <img src="![images](https://github.com/zhoukang12321/HSG_VN2/assets/127489297/a72868f9-0ff2-4c80-9742-29296261bca1)
-" alt="TaPA" width="256"/>
+" alt="HSG" width="256"/>
 
 # HSG
 </div>
