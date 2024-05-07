@@ -1,6 +1,6 @@
 <div align="center">
 <img src="![images](https://github.com/zhoukang12321/HSG_VN2/assets/127489297/a72868f9-0ff2-4c80-9742-29296261bca1)
-" alt="HSG" width="256"/>
+" alt="HSG_VN2" width="256"/>
 
 # HSG
 </div>
@@ -282,14 +282,6 @@ python generate/adapter_detic_robot_eval_random.py --navigation_strategy Select 
 python generate/adapter_detic_robot_eval_traversal.py --navigation_strategy Select one of the traversal strategies
 ```
 
-### Omnigibson preparation
-```bash
-python docker_build.py
-./run_docker.sh -h <ABS_DATA_PATH>
-```
 
-
- 
-All advised by [Jiwen Lu](http://ivg.au.tsinghua.edu.cn/Jiwen_Lu/). Zhenyu Wu is also advised by [Haibin Yan](https://scholar.google.com/citations?user=-AQLKlsAAAAJ).
 ## Acknowledgement
 This repo benefits from [AI2THOR](https://github.com/allenai/ai2thor), [LLaMA](https://github.com/facebookresearch/llama), [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca), [Detic](https://github.com/facebookresearch/Detic), and [Lit-LLaMA](https://github.com/Lightning-AI/lit-llama). Thanks for their wonderful works.
